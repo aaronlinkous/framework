@@ -1,0 +1,442 @@
+html, body {
+	background-color: $light_color;
+	font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+	font-size: $body_font_size;
+	line-height: 1.5em;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	img {
+		border: 0;
+		text-decoration: none;
+	}
+}
+
+h1, h2, h3, h4, h5, h6, li, p {
+	color: $dark_color;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	-moz-hyphens: auto;
+	hyphens: auto;
+	text-rendering: optimizeLegibility;
+	-webkit-font-feature-settings: 'liga', 'dlig';
+	-moz-font-feature-settings: 'liga', 'dlig';
+	font-feature-settings: 'liga', 'dlig';
+	-webkit-font-smoothing: antialiased;
+	font-family: "museo-sans","Georgia",serif;
+	font-weight: 300;
+}
+
+h1, h2 {
+	color: $primary_color;
+	font-size: 1.5em;
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+h2 {
+	color: $dark_color;
+	font-size: 1.25em;
+}
+
+h3 {
+	font-family: 'Myriad Pro', Tahoma, Verdana, Arial, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	line-height: 1em;
+}
+
+h4, h5, h6 {
+	font-size: 1em;
+}
+
+p {
+	font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+	font-size: 1em;
+	margin: 0 0 1.5em 0;
+}
+
+.clear {
+	&:after,&:before {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.show {
+	display: block !important;
+}
+
+.hide {
+	display: none !important;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.light_color {
+	color: $light_color;
+}
+
+.primary_color {
+	color: $primary_color;
+}
+
+.not_bold {
+	font-weight: normal;
+}
+
+.primary_bg {
+	color: $light_color;
+	text-shadow: 1px 1px 0 $primary_color_hover;
+	background-color: $primary_color;
+	border-color: $primary_color;
+
+	&:hover {
+		background-color: $primary_color_hover;
+		border-color: $primary_color_hover;
+	}
+}
+
+.ghosted_bg {
+	color: $dark_color;
+	text-shadow: 1px 1px 0 $ghosted_color_hover;
+	background-color: $ghosted_color;
+	border-color: $ghosted_color;
+
+	&:hover {
+		background-color: $ghosted_color_hover;
+		border-color: $ghosted_color_hover;
+	}
+}
+
+.accent_bg {
+	color: $light_color;
+	text-shadow: 1px 1px 0 $secondary_color_hover;
+	background-color: $secondary_color;
+	border-color: $secondary_color;
+
+	&:hover {
+		background-color: $secondary_color_hover;
+		border-color: $secondary_color_hover;
+	}
+}
+
+.right_align {
+	text-align: right;
+}
+
+.center_align{
+	text-align: center;
+}
+
+.rounded {
+	border-radius: $border_radius;
+}
+
+.right_square {
+	border-radius: $border_radius 0 0 $border_radius;
+}
+
+.left_square {
+	border-radius: 0 $border_radius $border_radius 0;
+}
+
+.append {
+	position: relative;
+	height: $input_height;
+
+	> * {
+		position: absolute;
+		float: none;
+	}
+
+	> *:first-child {
+		@extend .right_square;
+		left: 0;
+		right: $input_height - $border_width;
+		z-index: 1;
+	}
+
+	> *:last-child {
+		@extend .left_square;
+		right: 0;
+		z-index: 2;
+		width: $input_height;
+		height: $input_height;
+	}
+}
+
+.prepend {
+	position: relative;
+	height: $input_height;
+
+	> * {
+		position: absolute;
+		float: none;
+	}
+
+	> *:first-child {
+		@extend .right_square;
+		left: 0;
+		z-index: 2;
+		width: $input_height;
+		height: $input_height;
+	}
+
+	> *:last-child {
+		@extend .left_square;
+		right: 0;
+		left: $input_height - $border_width;
+		z-index: 1;
+	}
+}
+
+.pull_right {
+	float: right;
+	margin-left: $span_margin;
+}
+
+.pull_left {
+	float: left;
+	margin-right: $span_margin;
+
+	&:first-child {
+		margin-left: $span_margin;
+	}
+}
+
+.no_float {
+	float: none !important;
+}
+
+ul {
+	margin: 0;
+	padding: 0 0 0 $span_margin*2;
+
+	&.no_list_style {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	
+		li {
+			padding: $border_width*3 0;
+		}
+	}
+
+	&.zebra {
+		li {
+			&:nth-child(odd) {
+				background-color: $ghosted_color;
+			}
+		}
+	}
+
+	&.border {
+		li {
+			border-bottom: $border_width solid $border_color;
+
+			&:last-child {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	&.hover {
+		li {
+			&:hover {
+				background-color: $ghosted_color_hover;
+			}
+		}
+	}
+
+	&.horizontal {
+		@extend .no_list_style;
+
+		li {
+			cursor: pointer;
+			float: left;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			border-left: 1px solid $border_color;
+	
+			&:first-child {
+				border-color: transparent;
+			}
+		}
+
+		&.no_border {
+			li {
+				border: none;
+			}
+		}
+	}
+
+	li {
+		font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
+	}
+}
+
+.status {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	font-size: $form_font_size;
+	text-align: center;
+	line-height: $input_height;
+}
+
+.flag {
+	font-weight: bold;
+
+	&.positive {
+		color: $light_color;
+		text-shadow: 1px 1px 0 $positive_color_hover;
+		background-color: $positive_color;
+	}
+
+	&.warning {
+		color: $light_color;
+		text-shadow: 1px 1px 0 $warning_color_hover;
+		background-color: $warning_color;
+	}
+
+	&.notice {
+		color: $dark_color;
+		text-shadow: 1px 1px 0 $light_color;
+		background-color: $notice_color;
+	}
+}
+
+.menu {
+	ul {
+		display: -webkit-flex;
+		display: -moz-flex;
+
+		li {
+			-webkit-flex: 1;
+			-moz-box-flex: 1;
+		}
+	}
+
+	i {
+		display: none;
+	}
+}
+
+.desktop {
+	display: block;
+}
+
+.mobile, .tablet {
+	display: none;
+}
+
+@media only screen and (max-width : $smart_phone) {
+	html, body {
+		font-size: $body_font_size_mobile;
+	}
+
+	h1, h2 {
+		text-align: center;
+	}
+
+
+	img {
+		max-width: 100%;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		display: block;
+	}
+
+	.menu {
+		width: $input_height !important;
+
+		i {
+			float: none;
+			cursor: pointer;
+			display: block;
+			padding: 0;
+		}
+		
+		ul {
+			display: none;
+			width: 100%;
+			position: absolute;
+			left: 0;
+			z-index: 2;
+			
+			li {
+				border-left: none;
+				width: 100% !important;
+			}
+		}
+	}
+
+	ul {
+		&.horizontal {
+			li {
+				float: none;
+				width: 100%;
+				padding: 5px 0;
+			}
+		}
+
+		&.no_list_style {
+			li {
+				padding: 5px 0;
+			}
+		}
+	}
+
+	.toggle_header {
+		height: $input_height;
+		line-height: $input_height;
+		text-align: center;
+		margin: 0 0 $row_margin;
+		position: relative;
+
+		&:after {
+			font-family: arial;
+			font-weight: bold;
+			position: absolute;
+			content: "+";
+			right: $m_span_margin;
+		}
+
+		&.open:after {
+			content: "-";
+		}
+	}
+	
+	.toggle_content {
+		display: none;
+		padding: 0 20px;
+
+		ul {
+			padding: 0;
+			margin: 10px;
+		}
+	}
+
+	.toggle_header.open + .toggle_content {
+		display: block;
+	}
+}

@@ -1,0 +1,37 @@
+[class*="icon-"] {
+	background-repeat: no-repeat;
+	background-size: $input_height $input_height;
+	background-position: center center;
+}
+
+i[class*="icon-"] {
+	float: left;
+	width: $input_height;
+	height: $input_height;
+}
+
+.icon-calendar {
+	background-image: url(../images/fw_cal@2x.png);
+}
+
+.icon-clock {
+	background-image: url(../images/fw_clock@2x.png);
+}
+
+.icon-menu {
+	background-image: url(../images/fw_menu@2x.png);
+}
+
+.icon-menu_white {
+	background-image: url(../images/fw_menu_white@2x.png);
+}
+
+.icon-right_arrow {
+	background-image: url(../images/right_arrow@2x.png);
+}
+
+.icon-drop_down {
+	background-image: url(../images/fw_drop_down@2x.png);
+	background-position: right center;
+	padding-right: 25px;
+}
