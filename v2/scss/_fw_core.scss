@@ -166,7 +166,7 @@ p {
 		z-index: 1;
 	}
 
-	> *:last-child {
+	> *:not(:first-child) {
 		@extend .left_square;
 		right: 0;
 		z-index: 2;
@@ -184,7 +184,7 @@ p {
 		float: none;
 	}
 
-	> *:first-child {
+	> *:not(:last-child) {
 		@extend .right_square;
 		left: 0;
 		z-index: 2;
@@ -320,22 +320,6 @@ ul {
 	}
 }
 
-.menu {
-	ul {
-		display: -webkit-flex;
-		display: -moz-flex;
-
-		li {
-			-webkit-flex: 1;
-			-moz-box-flex: 1;
-		}
-	}
-
-	i {
-		display: none;
-	}
-}
-
 .desktop {
 	display: block;
 }
@@ -372,7 +356,6 @@ ul {
 		i {
 			float: none;
 			cursor: pointer;
-			display: block;
 			padding: 0;
 		}
 		

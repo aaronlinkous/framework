@@ -84,6 +84,7 @@ input {
 
 label {
 	font-size: $form_font_size;
+	display: block;
 }
 
 @media only screen and (max-width : $smart_phone) {

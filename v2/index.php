@@ -29,7 +29,7 @@
 					<div class="mobile span3">Mobile Text</div>
 
 					<div class="span6 menu" id="nav">
-						<i class="icon-drop_down ghosted_bg rounded"></i>
+						<i class="icon-drop_down ghosted_bg rounded mobile"></i>
 						<ul class="horizontal">
 							<li>Home</li>
 							<li>About</li>
@@ -109,8 +109,9 @@
 				</div>
 
 				<div class="append span2 offset2">
-					<input type="text" class="" placeholder="Placeholder" />
-					<button tabindex="-1" class="primary_bg icon-clock"></button>
+					<input type="text" class="" placeholder="Placeholder"  style="display:block;"/>
+					<button tabindex="-1" class="primary_bg icon-clock" style="display:block;"></button>
+					<button tabindex="-1" class="primary_bg icon-calendar" style="display:none;"></button>
 				</div>
 			</div>
 
