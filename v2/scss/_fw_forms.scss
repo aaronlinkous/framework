@@ -22,7 +22,7 @@ input, textarea, button, select {
 
 	&::-webkit-input-placeholder, &::-moz-placeholder, &::placeholder {
 		color: $border_color;
-		font-size: 12px;
+		font-size: .9em;
 	}
 
 	&:focus {
@@ -59,7 +59,7 @@ select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	color: $border_color;
-	font-size: 12px;
+	font-size: .9em;
 
 	&.has_value {
 		color: $form_color;
@@ -79,6 +79,26 @@ input {
 	&[type='radio'], &[type='checkbox'] {
 		height: auto;
 		margin-right: 5px;
+	}
+
+	&.custom {
+		display: none;
+	
+		+ span {
+			border-radius: $border_radius;
+			position: relative;
+			top: 2px;
+			display: inline-block;
+			height: $input_height/2;
+			width: $input_height/2;
+			background: $secondary_color;
+		}
+	
+		&:checked {
+			+ span {
+				background: $primary_color;
+			}
+		}
 	}
 }
 

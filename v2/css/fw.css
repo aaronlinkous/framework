@@ -72,7 +72,7 @@ input, textarea, button, select {
 /* line 23, ../scss/_fw_forms.scss */
 input::-webkit-input-placeholder, input::-moz-placeholder, input::placeholder, textarea::-webkit-input-placeholder, textarea::-moz-placeholder, textarea::placeholder, button::-webkit-input-placeholder, button::-moz-placeholder, button::placeholder, select::-webkit-input-placeholder, select::-moz-placeholder, select::placeholder {
   color: #999891;
-  font-size: 12px;
+  font-size: .9em;
 }
 /* line 28, ../scss/_fw_forms.scss */
 input:focus, textarea:focus, button:focus, select:focus {
@@ -110,7 +110,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   color: #999891;
-  font-size: 12px;
+  font-size: .9em;
 }
 /* line 64, ../scss/_fw_forms.scss */
 select.has_value {
@@ -128,21 +128,39 @@ input[type='radio'], input[type='checkbox'] {
   height: auto;
   margin-right: 5px;
 }
+/* line 84, ../scss/_fw_forms.scss */
+input.custom {
+  display: none;
+}
+/* line 87, ../scss/_fw_forms.scss */
+input.custom + span {
+  border-radius: 4px;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  height: 17.2px;
+  width: 17.2px;
+  background: #366774;
+}
+/* line 98, ../scss/_fw_forms.scss */
+input.custom:checked + span {
+  background: #e0504b;
+}
 
-/* line 85, ../scss/_fw_forms.scss */
+/* line 105, ../scss/_fw_forms.scss */
 label {
   font-size: 16px;
   display: block;
 }
 
 @media only screen and (max-width: 720px) {
-  /* line 92, ../scss/_fw_forms.scss */
+  /* line 112, ../scss/_fw_forms.scss */
   input[type="text"], input[type="email"], input[type="search"], input[type="password"] {
     -webkit-appearance: caret;
     -moz-appearance: caret;
   }
 
-  /* line 99, ../scss/_fw_forms.scss */
+  /* line 119, ../scss/_fw_forms.scss */
   button.cta {
     height: 43px;
     clear: both;
@@ -152,15 +170,15 @@ label {
     margin: 1.5em 0;
     font-size: 18px;
   }
-  /* line 108, ../scss/_fw_forms.scss */
+  /* line 128, ../scss/_fw_forms.scss */
   button.cta:first-child {
     margin-top: 0;
   }
-  /* line 112, ../scss/_fw_forms.scss */
+  /* line 132, ../scss/_fw_forms.scss */
   button.cta span {
     float: none;
   }
-  /* line 116, ../scss/_fw_forms.scss */
+  /* line 136, ../scss/_fw_forms.scss */
   button.cta i {
     display: none;
   }
@@ -173,15 +191,20 @@ html, body {
   line-height: 1.5em;
   margin: 0;
   padding: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: 'liga', 'dlig';
+  -moz-font-feature-settings: 'liga', 'dlig';
+  font-feature-settings: 'liga', 'dlig';
+  -webkit-font-smoothing: antialiased;
 }
 
-/* line 11, ../scss/_fw_core.scss */
+/* line 16, ../scss/_fw_core.scss */
 a img {
   border: 0;
   text-decoration: none;
 }
 
-/* line 17, ../scss/_fw_core.scss */
+/* line 22, ../scss/_fw_core.scss */
 h1, h2, h3, h4, h5, h6, li, p {
   color: #5f5553;
   overflow-wrap: break-word;
@@ -197,7 +220,7 @@ h1, h2, h3, h4, h5, h6, li, p {
   font-weight: 300;
 }
 
-/* line 32, ../scss/_fw_core.scss */
+/* line 37, ../scss/_fw_core.scss */
 h1, h2 {
   color: #e0504b;
   font-size: 1.5em;
@@ -205,13 +228,13 @@ h1, h2 {
   line-height: 1.5em;
 }
 
-/* line 39, ../scss/_fw_core.scss */
+/* line 44, ../scss/_fw_core.scss */
 h2 {
   color: #5f5553;
   font-size: 1.25em;
 }
 
-/* line 44, ../scss/_fw_core.scss */
+/* line 49, ../scss/_fw_core.scss */
 h3 {
   font-family: 'Myriad Pro', Tahoma, Verdana, Arial, sans-serif;
   font-size: 1em;
@@ -219,140 +242,140 @@ h3 {
   line-height: 1em;
 }
 
-/* line 51, ../scss/_fw_core.scss */
+/* line 56, ../scss/_fw_core.scss */
 h4, h5, h6 {
   font-size: 1em;
 }
 
-/* line 55, ../scss/_fw_core.scss */
+/* line 60, ../scss/_fw_core.scss */
 p {
   font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
   font-size: 1em;
   margin: 0 0 1.5em 0;
 }
 
-/* line 62, ../scss/_fw_core.scss */
+/* line 67, ../scss/_fw_core.scss */
 .clear:after, .row:after, .clear:before, .row:before {
   display: table;
   content: "";
   line-height: 0;
 }
-/* line 68, ../scss/_fw_core.scss */
+/* line 73, ../scss/_fw_core.scss */
 .clear:after, .row:after {
   clear: both;
 }
 
-/* line 73, ../scss/_fw_core.scss */
+/* line 78, ../scss/_fw_core.scss */
 .show {
   display: block !important;
 }
 
-/* line 77, ../scss/_fw_core.scss */
+/* line 82, ../scss/_fw_core.scss */
 .hide {
   display: none !important;
 }
 
-/* line 81, ../scss/_fw_core.scss */
+/* line 86, ../scss/_fw_core.scss */
 .lowercase {
   text-transform: lowercase;
 }
 
-/* line 85, ../scss/_fw_core.scss */
+/* line 90, ../scss/_fw_core.scss */
 .light_color {
   color: #fbfbfa;
 }
 
-/* line 89, ../scss/_fw_core.scss */
+/* line 94, ../scss/_fw_core.scss */
 .primary_color {
   color: #e0504b;
 }
 
-/* line 93, ../scss/_fw_core.scss */
+/* line 98, ../scss/_fw_core.scss */
 .not_bold {
   font-weight: normal;
 }
 
-/* line 97, ../scss/_fw_core.scss */
+/* line 102, ../scss/_fw_core.scss */
 .primary_bg {
   color: #fbfbfa;
   text-shadow: 1px 1px 0 #dc3b35;
   background-color: #e0504b;
   border-color: #e0504b;
 }
-/* line 103, ../scss/_fw_core.scss */
+/* line 108, ../scss/_fw_core.scss */
 .primary_bg:hover {
   background-color: #dc3b35;
   border-color: #dc3b35;
 }
 
-/* line 109, ../scss/_fw_core.scss */
+/* line 114, ../scss/_fw_core.scss */
 .ghosted_bg {
   color: #5f5553;
   text-shadow: 1px 1px 0 #d9d9d6;
   background-color: #c9c9c6;
   border-color: #c9c9c6;
 }
-/* line 115, ../scss/_fw_core.scss */
+/* line 120, ../scss/_fw_core.scss */
 .ghosted_bg:hover {
   background-color: #d9d9d6;
   border-color: #d9d9d6;
 }
 
-/* line 121, ../scss/_fw_core.scss */
+/* line 126, ../scss/_fw_core.scss */
 .accent_bg {
   color: #fbfbfa;
   text-shadow: 1px 1px 0 #174c5b;
   background-color: #366774;
   border-color: #366774;
 }
-/* line 127, ../scss/_fw_core.scss */
+/* line 132, ../scss/_fw_core.scss */
 .accent_bg:hover {
   background-color: #174c5b;
   border-color: #174c5b;
 }
 
-/* line 133, ../scss/_fw_core.scss */
+/* line 138, ../scss/_fw_core.scss */
 .right_align {
   text-align: right;
 }
 
-/* line 137, ../scss/_fw_core.scss */
+/* line 142, ../scss/_fw_core.scss */
 .center_align {
   text-align: center;
 }
 
-/* line 141, ../scss/_fw_core.scss */
+/* line 146, ../scss/_fw_core.scss */
 .rounded {
   border-radius: 4px;
 }
 
-/* line 145, ../scss/_fw_core.scss */
+/* line 150, ../scss/_fw_core.scss */
 .right_square, .append > *:first-child, .prepend > *:not(:last-child) {
   border-radius: 4px 0 0 4px;
 }
 
-/* line 149, ../scss/_fw_core.scss */
+/* line 154, ../scss/_fw_core.scss */
 .left_square, .append > *:not(:first-child), .prepend > *:last-child {
   border-radius: 0 4px 4px 0;
 }
 
-/* line 153, ../scss/_fw_core.scss */
+/* line 158, ../scss/_fw_core.scss */
 .append {
   position: relative;
   height: 34.4px;
 }
-/* line 157, ../scss/_fw_core.scss */
+/* line 162, ../scss/_fw_core.scss */
 .append > * {
   position: absolute;
   float: none;
 }
-/* line 162, ../scss/_fw_core.scss */
+/* line 167, ../scss/_fw_core.scss */
 .append > *:first-child {
   left: 0;
   right: 33.4px;
   z-index: 1;
 }
-/* line 169, ../scss/_fw_core.scss */
+/* line 174, ../scss/_fw_core.scss */
 .append > *:not(:first-child) {
   right: 0;
   z-index: 2;
@@ -360,83 +383,83 @@ p {
   height: 34.4px;
 }
 
-/* line 178, ../scss/_fw_core.scss */
+/* line 183, ../scss/_fw_core.scss */
 .prepend {
   position: relative;
   height: 34.4px;
 }
-/* line 182, ../scss/_fw_core.scss */
+/* line 187, ../scss/_fw_core.scss */
 .prepend > * {
   position: absolute;
   float: none;
 }
-/* line 187, ../scss/_fw_core.scss */
+/* line 192, ../scss/_fw_core.scss */
 .prepend > *:not(:last-child) {
   left: 0;
   z-index: 2;
   width: 34.4px;
   height: 34.4px;
 }
-/* line 195, ../scss/_fw_core.scss */
+/* line 200, ../scss/_fw_core.scss */
 .prepend > *:last-child {
   right: 0;
   left: 33.4px;
   z-index: 1;
 }
 
-/* line 203, ../scss/_fw_core.scss */
+/* line 208, ../scss/_fw_core.scss */
 .pull_right {
   float: right;
   margin-left: 20px;
 }
 
-/* line 208, ../scss/_fw_core.scss */
+/* line 213, ../scss/_fw_core.scss */
 .pull_left {
   float: left;
   margin-right: 20px;
 }
-/* line 212, ../scss/_fw_core.scss */
+/* line 217, ../scss/_fw_core.scss */
 .pull_left:first-child {
   margin-left: 20px;
 }
 
-/* line 217, ../scss/_fw_core.scss */
+/* line 222, ../scss/_fw_core.scss */
 .no_float {
   float: none !important;
 }
 
-/* line 221, ../scss/_fw_core.scss */
+/* line 226, ../scss/_fw_core.scss */
 ul {
   margin: 0;
   padding: 0 0 0 40px;
 }
-/* line 225, ../scss/_fw_core.scss */
+/* line 230, ../scss/_fw_core.scss */
 ul.no_list_style, ul.horizontal {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 230, ../scss/_fw_core.scss */
+/* line 235, ../scss/_fw_core.scss */
 ul.no_list_style li, ul.horizontal li {
   padding: 3px 0;
 }
-/* line 237, ../scss/_fw_core.scss */
+/* line 242, ../scss/_fw_core.scss */
 ul.zebra li:nth-child(odd) {
   background-color: #c9c9c6;
 }
-/* line 244, ../scss/_fw_core.scss */
+/* line 249, ../scss/_fw_core.scss */
 ul.border li {
   border-bottom: 1px solid #999891;
 }
-/* line 247, ../scss/_fw_core.scss */
+/* line 252, ../scss/_fw_core.scss */
 ul.border li:last-child {
   border-bottom-color: transparent;
 }
-/* line 255, ../scss/_fw_core.scss */
+/* line 260, ../scss/_fw_core.scss */
 ul.hover li:hover {
   background-color: #d9d9d6;
 }
-/* line 264, ../scss/_fw_core.scss */
+/* line 269, ../scss/_fw_core.scss */
 ul.horizontal li {
   cursor: pointer;
   float: left;
@@ -446,20 +469,20 @@ ul.horizontal li {
   box-sizing: border-box;
   border-left: 1px solid #999891;
 }
-/* line 273, ../scss/_fw_core.scss */
+/* line 278, ../scss/_fw_core.scss */
 ul.horizontal li:first-child {
   border-color: transparent;
 }
-/* line 279, ../scss/_fw_core.scss */
+/* line 284, ../scss/_fw_core.scss */
 ul.horizontal.no_border li {
   border: none;
 }
-/* line 285, ../scss/_fw_core.scss */
+/* line 290, ../scss/_fw_core.scss */
 ul li {
   font-family: 'Lucida Grande', Tahoma, Verdana, Arial, sans-serif;
 }
 
-/* line 290, ../scss/_fw_core.scss */
+/* line 295, ../scss/_fw_core.scss */
 .status {
   position: absolute;
   top: 0;
@@ -471,101 +494,86 @@ ul li {
   line-height: 34.4px;
 }
 
-/* line 301, ../scss/_fw_core.scss */
+/* line 306, ../scss/_fw_core.scss */
 .flag {
   font-weight: bold;
 }
-/* line 304, ../scss/_fw_core.scss */
+/* line 309, ../scss/_fw_core.scss */
 .flag.positive {
   color: #fbfbfa;
   text-shadow: 1px 1px 0 #069c69;
   background-color: #08cd8a;
 }
-/* line 310, ../scss/_fw_core.scss */
+/* line 315, ../scss/_fw_core.scss */
 .flag.warning {
   color: #fbfbfa;
   text-shadow: 1px 1px 0 #830833;
   background-color: #b30b46;
 }
-/* line 316, ../scss/_fw_core.scss */
+/* line 321, ../scss/_fw_core.scss */
 .flag.notice {
   color: #5f5553;
   text-shadow: 1px 1px 0 #fbfbfa;
   background-color: #f4d34f;
 }
 
-/* line 323, ../scss/_fw_core.scss */
+/* line 328, ../scss/_fw_core.scss */
 .desktop {
   display: block;
 }
 
-/* line 327, ../scss/_fw_core.scss */
+/* line 332, ../scss/_fw_core.scss */
 .mobile, .tablet {
   display: none;
 }
 
 @media only screen and (max-width: 720px) {
-  /* line 332, ../scss/_fw_core.scss */
+  /* line 337, ../scss/_fw_core.scss */
   html, body {
     font-size: 14px;
   }
 
-  /* line 336, ../scss/_fw_core.scss */
+  /* line 341, ../scss/_fw_core.scss */
   h1, h2 {
     text-align: center;
   }
 
-  /* line 341, ../scss/_fw_core.scss */
+  /* line 346, ../scss/_fw_core.scss */
   img {
     max-width: 100%;
   }
 
-  /* line 345, ../scss/_fw_core.scss */
+  /* line 350, ../scss/_fw_core.scss */
   .desktop {
     display: none;
   }
 
-  /* line 349, ../scss/_fw_core.scss */
+  /* line 354, ../scss/_fw_core.scss */
   .mobile {
     display: block;
   }
 
-  /* line 353, ../scss/_fw_core.scss */
-  .menu {
-    width: 34.4px !important;
+  /* line 358, ../scss/_fw_core.scss */
+  .pull_left {
+    margin-right: 0;
   }
-  /* line 356, ../scss/_fw_core.scss */
-  .menu i {
-    float: none;
-    cursor: pointer;
-    padding: 0;
-  }
-  /* line 362, ../scss/_fw_core.scss */
-  .menu ul {
-    display: none;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 2;
-  }
-  /* line 369, ../scss/_fw_core.scss */
-  .menu ul li {
-    border-left: none;
-    width: 100% !important;
+  /* line 361, ../scss/_fw_core.scss */
+  .pull_left:first-child {
+    margin-left: 0;
   }
 
-  /* line 378, ../scss/_fw_core.scss */
+  /* line 368, ../scss/_fw_core.scss */
   ul.horizontal li {
     float: none;
     width: 100%;
     padding: 5px 0;
   }
-  /* line 386, ../scss/_fw_core.scss */
+  /* line 376, ../scss/_fw_core.scss */
   ul.no_list_style li, ul.horizontal li {
     padding: 5px 0;
   }
 
-  /* line 392, ../scss/_fw_core.scss */
+  /* line 382, ../scss/_fw_core.scss */
   .toggle_header {
     height: 34.4px;
     line-height: 34.4px;
@@ -573,7 +581,7 @@ ul li {
     margin: 0 0 1.5em;
     position: relative;
   }
-  /* line 399, ../scss/_fw_core.scss */
+  /* line 389, ../scss/_fw_core.scss */
   .toggle_header:after {
     font-family: arial;
     font-weight: bold;
@@ -581,23 +589,23 @@ ul li {
     content: "+";
     right: 10px;
   }
-  /* line 407, ../scss/_fw_core.scss */
+  /* line 397, ../scss/_fw_core.scss */
   .toggle_header.open:after {
     content: "-";
   }
 
-  /* line 412, ../scss/_fw_core.scss */
+  /* line 402, ../scss/_fw_core.scss */
   .toggle_content {
     display: none;
     padding: 0 20px;
   }
-  /* line 416, ../scss/_fw_core.scss */
+  /* line 406, ../scss/_fw_core.scss */
   .toggle_content ul {
     padding: 0;
     margin: 10px;
   }
 
-  /* line 422, ../scss/_fw_core.scss */
+  /* line 412, ../scss/_fw_core.scss */
   .toggle_header.open + .toggle_content {
     display: block;
   }
@@ -756,32 +764,43 @@ ul li {
 .row.inverse [class*="span"] {
   float: right;
 }
-/* line 45, ../scss/_fw_grid.scss */
-.row.no_margin {
-  margin-bottom: 0;
+
+/* line 46, ../scss/_fw_grid.scss */
+.no_margin {
+  margin-bottom: 0 !important;
+}
+
+/* line 50, ../scss/_fw_grid.scss */
+.half_margin {
+  margin-bottom: 0.75em !important;
+}
+
+/* line 54, ../scss/_fw_grid.scss */
+.full_margin {
+  margin-bottom: 1.5em !important;
 }
 
 @media only screen and (max-width: 720px) {
-  /* line 52, ../scss/_fw_grid.scss */
+  /* line 60, ../scss/_fw_grid.scss */
   .container {
     width: 100%;
   }
 
-  /* line 56, ../scss/_fw_grid.scss */
+  /* line 64, ../scss/_fw_grid.scss */
   .row, .row.inverse {
     margin: 0 10px 1.5em;
   }
-  /* line 59, ../scss/_fw_grid.scss */
+  /* line 67, ../scss/_fw_grid.scss */
   .row [class*="span"], .row.inverse [class*="span"] {
     margin: 0 0 1.5em;
     float: none;
     width: 100%;
   }
-  /* line 64, ../scss/_fw_grid.scss */
+  /* line 72, ../scss/_fw_grid.scss */
   .row [class*="span"]:last-child, .row.inverse [class*="span"]:last-child {
     margin-bottom: 0;
   }
-  /* line 70, ../scss/_fw_grid.scss */
+  /* line 78, ../scss/_fw_grid.scss */
   .row [class*="split"] > *, .row.inverse [class*="split"] > * {
     float: left;
     -webkit-box-sizing: border-box;
@@ -789,31 +808,31 @@ ul li {
     box-sizing: border-box;
     margin-bottom: 1.5em;
   }
-  /* line 77, ../scss/_fw_grid.scss */
+  /* line 85, ../scss/_fw_grid.scss */
   .row [class*="split"] > *:first-child, .row.inverse [class*="split"] > *:first-child {
     padding-right: 5px;
   }
-  /* line 81, ../scss/_fw_grid.scss */
+  /* line 89, ../scss/_fw_grid.scss */
   .row [class*="split"] > *:last-child, .row.inverse [class*="split"] > *:last-child {
     padding-left: 5px;
   }
-  /* line 87, ../scss/_fw_grid.scss */
+  /* line 95, ../scss/_fw_grid.scss */
   .row .split2 > *, .row.inverse .split2 > * {
     width: 50%;
   }
-  /* line 91, ../scss/_fw_grid.scss */
+  /* line 99, ../scss/_fw_grid.scss */
   .row .split3 > *, .row.inverse .split3 > * {
     width: 33.33%;
   }
-  /* line 94, ../scss/_fw_grid.scss */
+  /* line 102, ../scss/_fw_grid.scss */
   .row .split3 > *:nth-child(2), .row.inverse .split3 > *:nth-child(2) {
     padding: 0 5px;
   }
-  /* line 99, ../scss/_fw_grid.scss */
+  /* line 107, ../scss/_fw_grid.scss */
   .row:last-child, .row.inverse:last-child {
     margin-bottom: 0;
   }
-  /* line 103, ../scss/_fw_grid.scss */
+  /* line 111, ../scss/_fw_grid.scss */
   .row.full_width, .row.inverse.full_width {
     width: auto;
     margin-left: 0;

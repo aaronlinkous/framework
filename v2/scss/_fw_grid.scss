@@ -41,10 +41,18 @@
 			float: right;
 		}
 	}
+}
 
-	&.no_margin {
-		margin-bottom: 0
-	}
+.no_margin {
+	margin-bottom: 0 !important;
+}
+
+.half_margin{
+	margin-bottom: $row_margin/2 !important;
+}
+
+.full_margin{
+	margin-bottom: $row_margin !important;
 }
 
 @media only screen and (max-width : $smart_phone) {

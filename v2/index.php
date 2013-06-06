@@ -25,6 +25,23 @@
 
 			<div class="row">
 				<div class="split2">
+					<div>
+						<div class="append span2 offset2">
+							<input type="text" class="" placeholder="Placeholder"  style="display:block;"/>
+							<button tabindex="-1" class="primary_bg icon-clock" style="display:block;"></button>
+							<button tabindex="-1" class="primary_bg icon-error" style="display:none;"></button>
+						</div>
+					</div>
+
+					<div>
+						<input type="text" class="span1" placeholder="Placeholder" />
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="split2">
 					<div class="desktop span3">Desktop Text</div>
 					<div class="mobile span3">Mobile Text</div>
 
@@ -118,19 +135,19 @@
 			<div class="row">
 				<div class="span2 offset2">
 					<ul class="no_list_style border hover">
-						<li><label><input type="checkbox">Checkbox</label></li>
-						<li><label><input type="checkbox">Checkbox</label></li>
-						<li><label><input type="checkbox">Checkbox</label></li>
-						<li><label><input type="checkbox">Checkbox</label></li>
+						<li><label><input type="checkbox" class="custom"><span></span> Checkbox</label></li>
+						<li><label><input type="checkbox" class="custom"><span></span> Checkbox</label></li>
+						<li><label><input type="checkbox" class="custom"><span></span> Checkbox</label></li>
+						<li><label><input type="checkbox" class="custom"><span></span> Checkbox</label></li>
 					</ul>
 				</div>
 
 				<div class="span2 offset1">
 					<ul class="no_list_style zebra right_align">
-						<li><label><input type="radio">Radio Button</label></li>
-						<li><label><input type="radio">Radio Button</label></li>
-						<li><label><input type="radio">Radio Button</label></li>
-						<li><label><input type="radio">Radio Button</label></li>
+						<li><label><input type="radio" class="custom"><span></span> Radio Button</label></li>
+						<li><label><input type="radio" class="custom"><span></span> Radio Button</label></li>
+						<li><label><input type="radio" class="custom"><span></span> Radio Button</label></li>
+						<li><label><input type="radio" class="custom"><span></span> Radio Button</label></li>
 					</ul>
 				</div>
 			</div>
